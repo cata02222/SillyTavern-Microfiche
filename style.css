@@ -1,0 +1,53 @@
+#microfiche_settings label:not(.checkbox_label) { display: block; margin-top: 8px; }
+#microfiche_settings .checkbox_label { margin-top: 8px; }
+#microfiche_settings small { display: block; opacity: 0.7; }
+#mf_experimental_model { overflow-wrap: anywhere; }
+#microfiche_settings .mf-models { max-height: 160px; overflow-y: auto; margin-top: 6px; padding: 2px 8px 6px; border: 1px solid var(--SmartThemeBorderColor); border-radius: 6px; background: var(--black30a, rgba(0, 0, 0, 0.15)); }
+#microfiche_settings .mf-models .checkbox_label { margin-top: 2px; }
+#microfiche_settings .mf-tested { display: inline; opacity: 0.6; }
+#microfiche_settings .mf-advanced { margin: 12px 0 10px; }
+#microfiche_settings .mf-advanced > .inline-drawer-header { background: none; border: none; box-shadow: none; padding: 4px 0; font-size: 0.9em; opacity: 0.8; justify-content: flex-start; gap: 6px; }
+#microfiche_settings .mf-advanced > .inline-drawer-header::before { display: none; }
+#microfiche_settings .mf-advanced > .inline-drawer-content { padding-left: 10px; border-left: 2px solid var(--SmartThemeBorderColor); }
+
+.mes:not(.mf-on-page) .mf_show_page { display: none; }
+
+.mf_saved { font-size: 0.75em; opacity: 0.55; text-align: center; font-family: var(--monoFontFamily, monospace); }
+
+.mf-popup { text-align: left; }
+.mf-popup .mf-caption { font-size: 0.85em; opacity: 0.75; margin: 6px 0 4px; font-family: var(--monoFontFamily, monospace); }
+.mf-popup .mf-scroll { max-height: 65vh; overflow: auto; border: 1px solid var(--SmartThemeBorderColor); }
+.mf-popup .mf-sheet { position: relative; }
+.mf-popup .mf-sheet img { display: block; max-width: none; image-rendering: pixelated; }
+.mf-popup .mf-mark { position: absolute; left: 0; right: 0; background: rgba(255, 200, 0, 0.28); pointer-events: none; }
+.mf-popup .mf-scroll > img { display: block; max-width: none; image-rendering: pixelated; }
+#microfiche_settings .mf-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
+#microfiche_settings .mf-row .checkbox_label { margin-top: 0; }
+#microfiche_settings .mf-status { display: flex; align-items: center; gap: 6px; font-size: 0.95em; }
+#microfiche_settings .mf-status::before { content: ''; flex: none; width: 9px; height: 9px; border-radius: 50%; background: #888; }
+#microfiche_settings .mf-status[data-state="working"]::before { background: #5cb85c; box-shadow: 0 0 6px #5cb85c; }
+#microfiche_settings .mf-status[data-state="waiting"]::before { background: #f0ad4e; }
+#microfiche_settings .mf-status[data-state="idle"]::before { background: #d9534f; }
+#microfiche_settings .mf-buttons { display: flex; gap: 6px; margin-top: 10px; }
+#microfiche_settings .mf-buttons .menu_button { width: fit-content; margin: 0; }
+#microfiche_settings .mf-section { margin-top: 12px; padding: 8px 10px; border: 1px solid var(--SmartThemeBorderColor); border-radius: 8px; background: var(--black30a, rgba(0, 0, 0, 0.15)); }
+#microfiche_settings .mf-section-title { display: flex; align-items: center; gap: 8px; font-weight: 600; }
+#microfiche_settings .mf-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 12px; margin: 4px 0 6px; }
+#microfiche_settings .mf-grid .checkbox_label { margin-top: 4px; }
+.mf_page_icon { display: none; font-size: 0.8em; opacity: 0.6; cursor: pointer; text-align: center; margin-top: 2px; }
+.mf_page_icon:hover { opacity: 1; }
+.mes.mf-on-page .mf_page_icon { display: block; }
+.mf-popup .mf-gallery-title { margin: 14px 0 4px; }
+.mf-popup .mf-thumb { display: block; width: 100%; height: auto; image-rendering: pixelated; cursor: zoom-in; background: #fff; }
+.mf-popup .mf-thumb.mf-zoom { width: auto; max-width: none; cursor: zoom-out; }
+
+#microfiche_settings .mf-keep-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 10px; }
+#microfiche_settings .mf-keep-row .menu_button { display: inline-flex; align-items: center; gap: 5px; flex: none; width: auto; min-width: 0; margin: 0; padding: 3px 8px; white-space: nowrap; }
+#microfiche_settings .mf-keep-row + small code { font-size: 0.9em; overflow-wrap: anywhere; }
+#microfiche_settings .mf-keep-info { margin-left: 5px; cursor: help; }
+
+.mf-popup .mf-preview-frame { aspect-ratio: 1568 / var(--mf-used-height); overflow: hidden; max-height: none; cursor: zoom-in; }
+.mf-popup .mf-preview-frame.mf-expanded { aspect-ratio: auto; max-height: 65vh; overflow: auto; cursor: zoom-out; }
+.mf-popup .mf-preview-details { margin-top: 16px; font-size: 0.9em; }
+.mf-popup .mf-preview-details summary { cursor: pointer; opacity: 0.8; }
+.mf-popup .mf-preview-summary { margin: 6px 0 12px; }

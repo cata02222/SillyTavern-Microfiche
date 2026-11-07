@@ -1,0 +1,95 @@
+<div id="microfiche_settings">
+    <div class="inline-drawer">
+        <div class="inline-drawer-toggle inline-drawer-header">
+            <b>Microfiche</b>
+            <div class="inline-drawer-icon fa-solid fa-circle-chevron-down down"></div>
+        </div>
+        <div class="inline-drawer-content">
+            <div class="mf-row">
+                <label class="checkbox_label" for="mf_enabled">
+                    <input id="mf_enabled" type="checkbox">
+                    <span>On</span>
+                </label>
+                <div id="mf_status" class="mf-status"></div>
+            </div>
+
+            <label class="checkbox_label" for="mf_savings">
+                <input id="mf_savings" type="checkbox">
+                <span>Show tokens saved under each reply</span>
+            </label>
+
+            <div class="mf-section">
+                <div class="mf-section-title">Send as images</div>
+                <div class="mf-grid">
+                    <label class="checkbox_label" for="mf_img_chat"><input id="mf_img_chat" type="checkbox"><span>Chat history</span></label>
+                    <label class="checkbox_label" for="mf_img_preset"><input id="mf_img_preset" type="checkbox"><span>Preset</span></label>
+                    <label class="checkbox_label" for="mf_img_card"><input id="mf_img_card" type="checkbox"><span>Character card</span></label>
+                    <label class="checkbox_label" for="mf_img_persona"><input id="mf_img_persona" type="checkbox"><span>Persona</span></label>
+                    <label class="checkbox_label" for="mf_img_lorebook"><input id="mf_img_lorebook" type="checkbox"><span>Lorebook</span></label>
+                </div>
+            </div>
+
+            <div class="mf-buttons">
+                <div id="mf_stats" class="menu_button menu_button_icon" title="See every image attached to your next request">
+                    <i class="fa-solid fa-images"></i>
+                    <span>Preview</span>
+                </div>
+            </div>
+
+            <div class="inline-drawer mf-advanced">
+                <div class="inline-drawer-toggle inline-drawer-header">
+                    <span>Advanced</span>
+                    <div class="inline-drawer-icon fa-solid fa-circle-chevron-down down"></div>
+                </div>
+                <div class="inline-drawer-content">
+                    <label for="mf_detail">Picture quality</label>
+                    <select id="mf_detail" class="text_pole">
+                        <option value="low">Low: up to 20× cheaper than text (OpenRouter only)</option>
+                        <option value="medium">Medium: up to 9.9× cheaper than text</option>
+                        <option value="high">High: up to 4.95× cheaper than text</option>
+                    </select>
+                    <small id="mf_quality_note">Lower is cheaper but gets more wrong. Medium is the sweet spot. High gets more details right. On AI Studio and Vertex, Low goes as Medium.</small>
+
+                    <label for="mf_keep">Keep newest as text (tokens)</label>
+                    <input id="mf_keep" class="text_pole" type="number" min="0" step="500">
+                    <small>The newest message always goes as normal text, plus older ones up to this many tokens. Lower saves a bit more. Higher keeps exact wording sharper.</small>
+
+                    <label class="checkbox_label" for="mf_pack">
+                        <input id="mf_pack" type="checkbox">
+                        <span>Pack preset, card, persona and lorebook tightly</span>
+                    </label>
+                    <small>Off keeps their line breaks, on more images.</small>
+
+                    <div class="mf-keep-row">
+                        <span>Keep a prompt as text</span>
+                        <button id="mf_copy_keep" type="button" class="menu_button" title="Copy &lt;!-- microfiche:keep --&gt;" aria-label="Copy prompt exemption marker"><i class="fa-solid fa-copy" aria-hidden="true"></i> Copy</button>
+                    </div>
+                    <small>Put <code>&lt;!-- microfiche:keep --&gt;</code> anywhere in that prompt.<span title="With Squash system messages on, the entire merged block stays as text." class="fa-solid fa-circle-info mf-keep-info" aria-label="Squash system messages keeps the whole merged block as text"></span></small>
+
+                    <label>Models</label>
+                    <small>Gemini models on your current connection. Untick one to send it plain text.</small>
+                    <div id="mf_models" class="mf-models"></div>
+
+                    <div id="mf_experimental">
+                        <label>Other models (experimental)</label>
+                        <label class="checkbox_label" for="mf_experimental_enabled">
+                            <input id="mf_experimental_enabled" type="checkbox">
+                            <span>Enable for <span id="mf_experimental_model"></span></span>
+                        </label>
+                        <small>Select Claude, GPT or another vision model in your connection settings, then enable it here.</small>
+                        <div id="mf_experimental_cost_row">
+                            <label for="mf_experimental_cost">Estimated tokens per image</label>
+                            <input id="mf_experimental_cost" class="text_pole" type="number" min="1" max="100000" step="1">
+                            <small>Starts at 1,500 as a placeholder. Set this for your model; it controls estimates and whether images save enough tokens.</small>
+                        </div>
+                    </div>
+
+                    <label class="checkbox_label" for="mf_notifications">
+                        <input id="mf_notifications" type="checkbox">
+                        <span>Show “sent as images” notifications</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
